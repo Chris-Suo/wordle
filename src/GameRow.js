@@ -1,25 +1,29 @@
 import React from 'react';
 import WordBox from './WordBox';
 
-export default function GameRow({input, state,rid, controlId}) {
-  //console.log(rid);
-  //console.log(controlId);
-  if(input && rid<=controlId){ 
-    return <div>
-        <WordBox word={input[rid*5+0]||'_'} state={state[rid*5+0]}/>
-        <WordBox word={input[rid*5+1]||'_'} state={state[rid*5+1]}/>
-        <WordBox word={input[rid*5+2]||'_'} state={state[rid*5+2]}/>
-        <WordBox word={input[rid*5+3]||'_'} state={state[rid*5+3]}/>
-        <WordBox word={input[rid*5+4]||'_'} state={state[rid*5+4]}/>
+export default function GameRow({input}) {
+  // {
+  //   "str":"str",
+  //   "state":[]
+  // }
+  return <div>
+        <WordBox word={input.str[0]||''} state={input.state[0]}/>
+        <WordBox word={input.str[1]||''} state={input.state[1]}/>
+        <WordBox word={input.str[2]||''} state={input.state[2]}/>
+        <WordBox word={input.str[3]||''} state={input.state[3]}/>
+        <WordBox word={input.str[4]||''} state={input.state[4]}/>
     </div>;
-  }
-  else{
-    return <div>
-        <WordBox word='' state=''/>
-        <WordBox word='' state=''/>
-        <WordBox word='' state=''/>
-        <WordBox word='' state=''/>
-        <WordBox word='' state=''/>
-    </div>;
-  }
+
+  // if(input){ 
+    
+  // }
+  // else{
+  //   return <div>
+  //       <WordBox word='' state=''/>
+  //       <WordBox word='' state=''/>
+  //       <WordBox word='' state=''/>
+  //       <WordBox word='' state=''/>
+  //       <WordBox word='' state=''/>
+  //   </div>;
+  // }
 }
