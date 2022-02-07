@@ -148,6 +148,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Chris's Wordle</h1>
       <GameBoard input={input}/>
       <Keyboard keyEvent={recKey} mask={keyBoardMask}/>
     </div>
