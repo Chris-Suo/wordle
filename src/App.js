@@ -30,6 +30,7 @@ let inputStr = '';
 let gameFinish = false;
 function App() { 
   const [input, setInput] = useState({});
+  const [keyBoardMask, setKeyBoardMask] = useState('');
 
   function recKey(event){
     if(gameFinish) return;
@@ -80,6 +81,15 @@ function App() {
           gameFinish = true;
           return;
         }
+
+        let keyHistory = keyBoardMask;
+        for(let i=0; i<inputStr.length;i++){
+          if(!keyHistory.includes(inputStr[i]) && !ans.toUpperCase().includes(inputStr[i])){
+            keyHistory+=inputStr[i];
+          }
+        }
+        setKeyBoardMask(keyHistory);
+
         currentLine++;
         inputStr='';
       }
@@ -89,7 +99,7 @@ function App() {
   return (
     <div className="App">
       <GameBoard input={input}/>
-      <Keyboard keyEvent={recKey}/>
+      <Keyboard keyEvent={recKey} mask={keyBoardMask}/>
     </div>
   );
 }
