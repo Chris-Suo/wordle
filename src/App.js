@@ -127,7 +127,7 @@ function App() {
       }
       else{
         if(currentLine>4){
-          alert('Game Over!');
+          alert('Game Over!\nAnswer: '+ans);
           gameFinish = true;
           return;
         }
