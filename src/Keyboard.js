@@ -27,6 +27,7 @@ export default function Keyboard({keyEvent}) {
       <span onClick={keyEvent}>L</span>
     </div>
     <div>
+      <span className='enter' onClick={keyEvent}>Enter</span>
       <span onClick={keyEvent}>Z</span>
       <span onClick={keyEvent}>X</span>
       <span onClick={keyEvent}>C</span>
@@ -34,6 +35,7 @@ export default function Keyboard({keyEvent}) {
       <span onClick={keyEvent}>B</span>
       <span onClick={keyEvent}>N</span>
       <span onClick={keyEvent}>M</span>
+      <span onClick={keyEvent}>←</span>
     </div>
   </div>;
 }

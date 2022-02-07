@@ -13,17 +13,4 @@ export default function GameRow({input}) {
         <WordBox word={input.str[3]||''} state={input.state[3]}/>
         <WordBox word={input.str[4]||''} state={input.state[4]}/>
     </div>;
-
-  // if(input){ 
-    
-  // }
-  // else{
-  //   return <div>
-  //       <WordBox word='' state=''/>
-  //       <WordBox word='' state=''/>
-  //       <WordBox word='' state=''/>
-  //       <WordBox word='' state=''/>
-  //       <WordBox word='' state=''/>
-  //   </div>;
-  // }
 }
