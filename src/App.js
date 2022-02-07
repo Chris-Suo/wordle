@@ -27,10 +27,12 @@ function checkAnser(str){
 
 let currentLine = 0;
 let inputStr = '';
+let gameFinish = false;
 function App() { 
   const [input, setInput] = useState({});
 
   function recKey(event){
+    if(gameFinish) return;
     let key = event.target.innerText;
     let checkResult;
     
@@ -69,8 +71,15 @@ function App() {
     if(checkResult){
       if(checkResult.correct){
         alert('GOOD!');
+        gameFinish = true;
+        return;
       }
       else{
+        if(currentLine>4){
+          alert('Game Over!');
+          gameFinish = true;
+          return;
+        }
         currentLine++;
         inputStr='';
       }
