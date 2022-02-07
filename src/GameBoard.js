@@ -3,7 +3,7 @@ import GameRow from './GameRow';
 
 let gameLine = [{"str":'', "state":[]},{"str":'', "state":[]},{"str":'', "state":[]},{"str":'', "state":[]},{"str":'', "state":[]},{"str":'', "state":[]}];
 export default function GameBoard({input}) {
-  if(Object.keys(input).length != 0){
+  if(Object.keys(input).length !== 0){
     gameLine[input.lineNum].str = input.str;
     gameLine[input.lineNum].state = input.state;
   }

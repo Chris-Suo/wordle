@@ -35,7 +35,7 @@ function App() {
     let checkResult;
     
     if(key === 'Enter'){
-      if(inputStr.length != 5){
+      if(inputStr.length !== 5){
         alert('Please input 5 characters');
         return;
       }
